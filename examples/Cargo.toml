@@ -1,0 +1,22 @@
+[package]
+name = "examples"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dev-dependencies]
+syn = { version = "2" }
+derive-attribute = { path = "../derive-attribute", features = ["syn_2"] }
+
+
+[[example]]
+name = "basic"
+path = "basic.rs"
+
+[[example]]
+name = "custom_arg"
+path = "custom_arg.rs"
+
+[[example]]
+name = "custom_arg_manual"
+path = "custom_arg_manual.rs"

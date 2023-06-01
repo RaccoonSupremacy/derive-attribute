@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "derive-attribute-utils",
+    "derive-attribute-macros",
+    "derive-attribute",
+
+    "examples"
+]

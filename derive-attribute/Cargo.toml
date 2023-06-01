@@ -1,0 +1,20 @@
+[package]
+name = "derive-attribute"
+version = "0.1.2"
+edition = "2021"
+license = "MIT"
+description = "A set of macros to automatically deserialize standard attributes"
+keywords = ["deserialization", "proc-macro", "attribute", "derive", "macro"]
+documentation = "https://docs.rs/derive-attribute"
+repository = "https://github.com/RaccoonSupremacy/derive-attribute"
+
+[features]
+syn_1 = ["derive-attribute-utils/syn_1", "derive-attribute-macros/syn_1"]
+syn_2 = ["derive-attribute-utils/syn_2", "derive-attribute-macros/syn_2"]
+
+[dependencies]
+derive-attribute-utils = { version = "0.1.1", path = "../derive-attribute-utils" }
+derive-attribute-macros = { version = "0.1.1", path = "../derive-attribute-macros" }
+
+[package.metadata.docs.rs]
+all-features = true

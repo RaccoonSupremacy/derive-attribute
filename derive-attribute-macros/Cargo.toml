@@ -1,0 +1,20 @@
+[package]
+name = "derive-attribute-macros"
+version = "0.1.1"
+edition = "2021"
+license = "MIT"
+description = "A procedural macro crate for derive-attribute"
+
+[features]
+syn_1 = []
+syn_2 = []
+
+[lib]
+proc-macro = true
+
+[dependencies]
+derive-attribute-utils = { version = "0.1.1", path = "../derive-attribute-utils", features = ["syn_2"] }
+syn_v2 = { package = "syn", version = "2", features = ["full"] }
+proc-macro2 = "1.0.56"
+quote = "1.0.27"
+convert_case = "0.6.0"
